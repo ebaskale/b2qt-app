@@ -25,7 +25,7 @@ ApplicationWindow {
                 to: 64
                 duration: 800
             }
-        }
+         }
     }
     TimeWatcher {
         id: timeWatcher
