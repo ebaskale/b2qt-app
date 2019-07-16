@@ -6,8 +6,6 @@
 
 int main(int argc, char *argv[])
 {
-//    qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
-//    qputenv("QT_QPA_PLATFORM", QByteArray("eglfs"));
     qputenv("QT_QPA_EGLFS_PHYSICAL_WIDTH", QByteArray("215"));
     qputenv("QT_QPA_EGLFS_PHYSICAL_HEIGHT", QByteArray("157"));
 
@@ -16,7 +14,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<networktest>("tr.com.pcis", 1, 0, "NetworkTester");
     static QTextStream ts( stdout );
-    ts << "fuck";
+
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
