@@ -1,4 +1,4 @@
-QT += core gui quick network
+QT += core gui quick
 QT -= widgets
 CONFIG += c++11
 
@@ -16,7 +16,7 @@ TARGET = b2qt
 
 SOURCES += \
         main.cpp \
-        networktest.cpp
+        services/timeservice.cpp
 
 RESOURCES += qml.qrc
 
@@ -32,4 +32,4 @@ else: unix:!android: target.path = /usr/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    networktest.h
+    services/timeservice.h

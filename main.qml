@@ -8,25 +8,23 @@ ApplicationWindow {
     height: 480
     title: qsTr("Scroll")
 
-    ScrollView {
+    Rectangle {
+        id: rectangle
         anchors.fill: parent
-
-        ListView {
-            width: parent.width
-            model: 55
-            delegate: ItemDelegate {
-                text: "Item " + (index + 1)
-                width: parent.width
-                onClicked: function(){
-                    this.text = tester.getNames();
-                }
-            }
+        color: "black"
+        Text {
+            id: time
+            color: "white"
+            text: "00:00:00"
+            font.pointSize: 35
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
         }
     }
-
-
-
-    NetworkTester {
-        id:tester
+    TimeWatcher {
+        id: timeWatcher
+        onTick: function(curTime){
+            time.text = curTime;
+        }
     }
 }
