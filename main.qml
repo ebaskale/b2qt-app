@@ -4,8 +4,8 @@ import tr.com.pcis 1.0
 
 ApplicationWindow {
     visible: true
-    width: 640
-    height: 480
+    width: 1024
+    height: 768
     title: qsTr("Scroll")
 
     Rectangle {
@@ -15,16 +15,23 @@ ApplicationWindow {
         Text {
             id: time
             color: "white"
-            text: "00:00:00"
-            font.pointSize: 35
+            text: "--:--:--"
+            font.pointSize: 64
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
+            NumberAnimation on font.pointSize {
+                id: numAnim
+                from: 84
+                to: 64
+                duration: 800
+            }
         }
     }
     TimeWatcher {
         id: timeWatcher
         onTick: function(curTime){
             time.text = curTime;
+            numAnim.start();
         }
     }
 }
