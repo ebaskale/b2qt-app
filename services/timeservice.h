@@ -12,6 +12,7 @@ public:
 signals:
     void tick(const QString time);
 public slots:
+    void throwError();
 
 private:
     QTimer *timer;

@@ -13,6 +13,11 @@ TimeService::TimeService(QObject *parent) : QObject(parent)
 
 }
 
+void TimeService::throwError()
+{
+    throw "Break the Code!";
+}
+
 void TimeService::handleTimerTick()
 {
     QTime time = QTime::currentTime();

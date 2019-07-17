@@ -25,6 +25,20 @@ ApplicationWindow {
                 to: 64
                 duration: 800
             }
+        }
+
+         Button {
+             id: button
+             x: 462
+             y: 539
+             text: qsTr("Click Me")
+             autoExclusive: false
+             flat: false
+             highlighted: false
+             anchors.horizontalCenter: parent.horizontalCenter
+             onClicked: function(){
+                 throw "hadi";
+             }
          }
     }
     TimeWatcher {
