@@ -21,6 +21,6 @@ void TimeService::throwError()
 void TimeService::handleTimerTick()
 {
     QTime time = QTime::currentTime();
-    emit tick(time.toString("hh:mm:ss"));
+    emit tickSeconds(time.toString("hh:mm:ss"));
 }
 

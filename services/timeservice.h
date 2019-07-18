@@ -10,9 +10,10 @@ class TimeService : public QObject
 public:
     explicit TimeService(QObject *parent = nullptr);
 signals:
-    void tick(const QString time);
+    void tickSeconds(const QString time);
+
 public slots:
-    void throwError();
+   void throwError();
 
 private:
     QTimer *timer;

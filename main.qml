@@ -13,7 +13,7 @@ ApplicationWindow {
         anchors.fill: parent
         color: "black"
         Text {
-            id: time
+            id: txtTime
             color: "white"
             text: "--:--:--"
             font.pointSize: 64
@@ -37,14 +37,29 @@ ApplicationWindow {
              highlighted: false
              anchors.horizontalCenter: parent.horizontalCenter
              onClicked: function(){
-                 throw "hadi";
+                 timeWatcher.throwError();
              }
+         }
+
+         Text {
+             id: element
+             x: 251
+             y: 140
+             width: 658
+             height: 95
+             color: "#ffffff"
+             text: qsTr("PCIS APP DEMO")
+             font.letterSpacing: 1.5
+             font.bold: true
+             anchors.horizontalCenterOffset: 0
+             anchors.horizontalCenter: parent.horizontalCenter
+             font.pixelSize: 83
          }
     }
     TimeWatcher {
         id: timeWatcher
-        onTick: function(curTime){
-            time.text = curTime;
+        onTickSeconds: function(time){
+            txtTime.text = time;
             numAnim.start();
         }
     }
