@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     qputenv("QT_QPA_EGLFS_PHYSICAL_HEIGHT", QByteArray("157"));
 
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QCoreApplication::setOrganizationDomain("tr.com.pcis");
+    QCoreApplication::setOrganizationDomain("com.baskale");
     QCoreApplication::setApplicationVersion("1.0");
 
     qmlRegisterType<TimeService>("tr.com.pcis", 1, 0, "TimeWatcher");

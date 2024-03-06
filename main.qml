@@ -1,6 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.5
-import tr.com.pcis 1.0
+import com.baskale 1.0
 
 ApplicationWindow {
     visible: true
